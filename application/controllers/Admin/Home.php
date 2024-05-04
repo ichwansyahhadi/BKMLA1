@@ -10,7 +10,7 @@ class Home extends CI_Controller {
 		$this->load->library(array('session','form_validation'));
 		$this->load->model(array('Admin'));
     }
-
+ 
 	public function index()
 	{
 		  $username = $this->input->post("txtUsername");

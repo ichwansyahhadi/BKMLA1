@@ -54,3 +54,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['Admin/'] = 'Admin/Home/$1';
 $route['berita'] = 'welcome/berita';
+$route['ver2'] = 'ver2';
