@@ -56,3 +56,4 @@ $route['Admin/'] = 'Admin/Home/$1';
 $route['berita'] = 'welcome/berita';
 $route['ver2'] = 'ver2';
 $route['api'] = 'api';
+$route['newsletter']['regist'] = 'newsletter/regist/$1';

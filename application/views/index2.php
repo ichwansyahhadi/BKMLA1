@@ -21,7 +21,8 @@
       <!-- fevicon -->
       <link rel="icon" href="<?php echo base_url();?>assets/images2/fevicon.png" type="image/gif" />
       <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"> -->
+      <link rel="stylesheet" href="<?php echo base_url();?>assets/css2/font-awesome.css">
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -41,7 +42,7 @@
                   <div class="full">
                      <div class="center-desk">
                         <div class="logo">
-                           <a href="<?php echo base_url('ver2');?>"><img src="<?php echo base_url();?>assets/images/logo.png" alt="#" /></a>
+                           <a href="<?php echo base_url('ver2');?>"><img src="<?php echo base_url();?>assets/images/logo.png" alt="#" style="max-height: 53px;"/></a>
                         </div>
                      </div>
                   </div>
@@ -66,7 +67,7 @@
                               <a class="nav-link" href="<?php echo base_url('ver2');?>">Publikasi</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="<?php echo base_url('ver2');?>">Kontak</a>
+                              <a class="nav-link" href="<?php echo base_url('Admin/Home');?>">Login</a>
                            </li>
                         </ul>
                      </div>
@@ -90,7 +91,7 @@
                <div class="row">
                   <div class="col-md-12">
                      <!-- carousel code -->
-                     <div id="carouselExampleIndicators" class="carousel slide">
+                     <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
                         <ol class="carousel-indicators">
                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -436,21 +437,23 @@
                         <div class="col-md-12">
                            <div class="infoma">
                               <h3>Newsletter</h3>
-                              <form class="form_subscri">
+                              <?php 
+                                 $attributes = array("id" => "newsletter", "name" => "newsletter", "class" => "form_subscri");
+                                 echo form_open("newsletter/regist", $attributes);
+                              ?>
+                              <!-- <form class="form_subscri"> -->
                                  <div class="row">
                                     <div class="col-md-12">
                                     </div>
                                     <div class="col-md-4">
-                                       <input class="newsl" placeholder="Enter your email" type="text" name="Enter your email">
+                                       <input class="newsl" placeholder="Enter your email" type="email" name="registEmail" id="registEmail">
                                     </div>
                                     <div class="col-md-4">
-                                       <input class="newsl" placeholder="Enter your email" type="text" name="Enter your email">
-                                    </div>
-                                    <div class="col-md-4">
-                                       <button class="subsci_btn">subscribe</button>
+                                       <button type="submit" class="subsci_btn">subscribe</button>
                                     </div>
                                  </div>
-                              </form>
+                              <!-- </form> -->
+                              <?php echo form_close(); ?>
                            </div>
                         </div>
                         <div class="col-md-9">
@@ -468,9 +471,9 @@
                         <div class="col-md-3">
                            <div class="infoma text_align_left">
                               <ul class="social_icon">
+                                 <li><a href="https://wa.me/+6281227901702"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                                  <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                  <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                 <li><a href="Javascript:void(0)"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
                                  <li><a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                               </ul>
                            </div>
